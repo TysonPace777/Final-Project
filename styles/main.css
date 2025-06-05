@@ -8,10 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: lightyellow;
-}
-
-header h1 {
-    padding-left: 10%;
+    overflow-x: hidden;
 }
 
 header img {
@@ -21,7 +18,7 @@ header img {
 
 main {
     padding: 0;
-    margin: 1rem;
+    margin: 0;
 }
 
 .center-text {
