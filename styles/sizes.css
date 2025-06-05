@@ -1,0 +1,115 @@
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        background-color: var(--blue500);
+    }
+
+    #separate {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: none;
+        width: 100%;
+        list-style: none;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+    }
+
+    .navigation li {
+        margin-bottom: 5px;
+    }
+
+    #menu {
+        display: flex;
+        padding: 2px 10px 2px 10px;
+        font-size: xx-large;
+        margin: 3px;
+        border-color: var(--amber300);
+        border-radius: 10px;
+        background-color: lightyellow;
+        align-self: center;
+    }
+
+    #menu:hover {
+        cursor: pointer;
+        background-color: var(--amber300);
+    }
+
+    .navigation.open {
+        display: block;
+    }
+
+    .navigation a {
+        display: inline-block;
+        width: 90%;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        border: 2px solid var(--amber300);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .navigation a:hover {
+        cursor: pointer;
+        background-color: var(--amber300);
+    }
+}
+
+@media screen and (min-width: 601px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--blue500);
+        margin: 0;
+    }
+
+    #separate {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 0.58;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation li {
+        list-style: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-shrink: 0;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 6px;
+        border-radius: 8px;
+        border: 2px solid var(--amber300);
+    }
+
+    .navigation a:hover {
+        cursor: pointer;
+        background-color: var(--amber300);
+        padding: 6px;
+        border-radius: 8px;
+    }
+}
