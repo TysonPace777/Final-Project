@@ -49,6 +49,7 @@ p {
     border-color: var(--amber300);
     background-image: linear-gradient(to right, lightblue, var(--blue500));
     font-size: large;
+    cursor: pointer;
 }
 
 footer {
