@@ -49,6 +49,23 @@ p {
     cursor: pointer;
 }
 
+.product-card {
+    text-align: center;
+    justify-items: center;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.cost {
+    color: black;
+    background-color: rgb(204, 247, 204);
+    padding: 4px;
+    border: 1px solid seagreen;
+    border-radius: 10px;
+}
+
 footer {
     width: 100%;
     background-color: rgba(135, 207, 235, 0.726);
