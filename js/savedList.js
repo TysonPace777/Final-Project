@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
 
     if (savedItems.length === 0) {
-        savedList.innerHTML = '<li class="center-text">No saved items found.</li>';
+        savedList.innerHTML = '<br><p class="center-text">No saved items found.</p><br>';
         return;
     }
 
