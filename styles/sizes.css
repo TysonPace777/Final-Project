@@ -63,17 +63,47 @@
     }
 
     #product-container {
-    display: grid;
-    margin-top: 15px;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5em;
-    max-width: 90%;
-    justify-self: center;
+        display: grid;
+        margin-top: 15px;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5em;
+        max-width: 90%;
+        justify-self: center;
+    }
 
     .prod-img {
         width: 150px;
     }
-}
+
+    .skeleton-card {
+        width: 20em;
+        height: 20em;
+        background-color: #e0e0e0;
+        border-radius: 15px;
+        margin: 10px;
+        animation: pulse 1.2s infinite ease-in-out;
+    }
+
+    .about-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 20px;
+    }
+
+    .about-images img {
+        width: 40%;
+        height: 20%;
+    }
+
+    #saved li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
 }
 
 @media screen and (min-width: 601px) {
@@ -127,15 +157,45 @@
     }
 
     #product-container {
-    display: grid;
-    margin-top: 15px;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5em;
-    max-width: 90%;
-    justify-self: center;
+        display: grid;
+        margin-top: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5em;
+        max-width: 90%;
+        justify-self: center;
+    }
 
     .prod-img {
         width: 250px;
     }
-}
+
+    .skeleton-card {
+        width: 40em;
+        height: 20em;
+        background-color: #e0e0e0;
+        border-radius: 15px;
+        margin: 10px;
+        animation: pulse 1.2s infinite ease-in-out;
+    }
+
+    .about-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        grid-gap: 20px;
+    }
+
+    .about-images img {
+        width: 300px;
+        height: 200px;
+    }
+
+    #saved li {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
 }

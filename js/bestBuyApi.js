@@ -1,4 +1,5 @@
 import { getRandomIndexes } from './randomApi.js';
+import { addSaveListeners } from './saved.js';
 
 const BASE_URL = 'https://fakestoreapi.com';
 
@@ -33,18 +34,27 @@ function renderProducts(products) {
 
   products.forEach(product => {
     container.innerHTML += `
-      <div class="product-card">
+      <div class="product-card"
+          data-id="${product.id}"
+          data-name="${product.title}"
+          data-price="${product.price}"
+          data-image="${product.image}">
         <img class="prod-img" src="${product.image}" alt="${product.title}" />
         <h3>${product.title}</h3>
         <p class="cost">Price: $${product.price}</p>
         <p>${product.description.substring(0, 125)}...</p>
+        <button class="saved-items">Add to Saved Items</button>
       </div>
     `;
   });
+  
+  addSaveListeners();
 }
 
 export async function showRandomSuggestions() {
   try {
+    renderSkeletons(6);
+
     const categories = await fetchTrendingCategories();
     if (categories.length === 0) {
       console.log('No trending categories found.');
@@ -72,6 +82,7 @@ export async function showRandomSuggestions() {
     }
 
     renderProducts(selectedProducts);
+    addSaveListeners();
   } catch (error) {
     console.error('Error in showRandomSuggestions:', error);
     renderProducts([]);

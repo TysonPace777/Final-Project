@@ -10,3 +10,15 @@ hamButton.addEventListener('click', () => {
         body.style.display = 'grid';
     }
 });
+
+function renderSkeletons(count = 6) {
+    const container = document.getElementById('product-container');
+    container.innerHTML = '';
+    container.classList.add('skeleton-container');
+
+    for (let i = 0; i < count; i++) {
+        const skeleton = document.createElement('div');
+        skeleton.className = 'skeleton-card';
+        container.appendChild(skeleton);
+    }
+}
