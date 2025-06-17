@@ -51,6 +51,10 @@ p {
     cursor: pointer;
 }
 
+#generate:hover {
+    color: white;
+}
+
 .product-card {
     text-align: center;
     justify-items: center;
